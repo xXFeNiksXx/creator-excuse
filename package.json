@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/xXFeNiksXx/creator-excuse/issues"
   },
-  "homepage": "https://github.com/xXFeNiksXx/creator-excuse#readme"
+  "homepage": "https://github.com/xXFeNiksXx/creator-excuse#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
 }
