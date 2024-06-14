@@ -1,0 +1,26 @@
+{
+  "name": "creator-excuse",
+  "version": "1.0.0",
+  "description": "creator excuse",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xXFeNiksXx/creator-excuse.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "creator team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xXFeNiksXx/creator-excuse/issues"
+  },
+  "homepage": "https://github.com/xXFeNiksXx/creator-excuse#readme"
+}
