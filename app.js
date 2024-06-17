@@ -32,6 +32,17 @@ app.post('/add-excuse', async (req, res) => {
 
 
 
+// gets
+app.get('/excuse', async (req, res) => {
+    try {
+        const excuse = await Excuse.find();
+        res.json(excuse);
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+
+
 // listen
 app.listen(PORT, () => {
     console.log(`Server work on port: ${PORT}`);
