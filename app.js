@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // mongoDB connect
-mongoose.connect(`mongodb+srv://nikitarich888:N2vyNgGJqkjmPoXS@cluster0.mtcisa7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(`mongodb+srv://zubalana0:xs2xO7q9rBvKBrdy@root.iqk47mq.mongodb.net/?retryWrites=true&w=majority&appName=root`)
     .then(() => {
         console.log(`Connect to mongo DB`);
     })
