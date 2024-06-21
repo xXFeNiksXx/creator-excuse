@@ -43,6 +43,18 @@ app.get('/excuse', async (req, res) => {
 })
 
 
+// delete
+app.delete('/deleteexcuse/:id', async (req, res) => {
+    try {
+    const id = req.params.id;
+    await Excuse.findByIdAndDelete(id);
+        res.status(204).json('successfully deleted');
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+
+
 // listen
 app.listen(PORT, () => {
     console.log(`Server work on port: ${PORT}`);
