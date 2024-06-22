@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // mongoDB connect
-mongoose.connect(`mongodb+srv://zubalana0:xs2xO7q9rBvKBrdy@root.iqk47mq.mongodb.net/?retryWrites=true&w=majority&appName=root`)
+mongoose.connect(`mongodb+srv://nikitarich888:dboIzMFNOaXEJjed@cluster0.a2b6h03.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => {
         console.log(`Connect to mongo DB`);
     })
@@ -30,7 +30,21 @@ app.post('/add-excuse', async (req, res) => {
     }
 });
 
-
+app.post('/changeexcuse/:id', async (req, res) => {
+    try {
+    const id = req.params.id;
+    const { newmesexcuse } = req.body;
+    const updatedExcuse = await Excuse.findByIdAndUpdate(
+        id,
+        { mesexcuse: newmesexcuse },
+        { new: true }
+    );
+    console.log(updatedExcuse);
+        res.status(200).json('successfully changed');
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
 
 // gets
 app.get('/excuse', async (req, res) => {
