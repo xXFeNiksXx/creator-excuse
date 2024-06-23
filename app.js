@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 
 app.use(express.json());
@@ -12,8 +14,8 @@ mongoose.connect(`mongodb+srv://nikitarich888:dboIzMFNOaXEJjed@cluster0.a2b6h03.
     .then(() => {
         console.log(`Connect to mongo DB`);
     })
-const Excuse = mongoose.model('Excuse', { avtor: String, mesexcuse: String });
-
+const Excuse = mongoose.model('Excuse', { avtor: String, mesexcuse: String, ratingsum: Number, ratingcount: Number, ratingaverage: Number });
+const Rating = mongoose.model('Rating', { idexcuse: String, rating: Number });
 
 
 // posts
@@ -42,6 +44,17 @@ app.post('/changeexcuse/:id', async (req, res) => {
     console.log(updatedExcuse);
         res.status(200).json('successfully changed');
     } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+app.post('/ratestars-stats-add/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const { rating } = req.body;
+        const newRating = new Rating({ idexcuse: id, rating: rating });
+        await newRating.save();
+        res.status(200).send('Rating added successfully');
+    }catch (err) {
         res.status(500).json({ message: err });
     }
 })
