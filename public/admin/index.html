@@ -6,12 +6,29 @@
     <title>admin panel</title>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.js' integrity='sha512-vHNHepeQWwAggJlhEk932jRS5sNdn/Nn4F+w4TpXW5dA+04qnd3e7YpfXo6auWhFG6z3FVhmScG4ovtF+qYeZw==' crossorigin='anonymous'></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>add excuse</h1>
-    <textarea id="excuseText" rows="4" cols="50"></textarea>
-    <input type="text"  id="avtor">
-    <button id="addBtn">Add Excuse</button>
+    <div class="wrap">
+        <header>
+            <h1>Admin panel</h1>
+        </header>
+       <main>
+        <form >
+            <p>Нова відмазка</p>
+            <textarea id="excuseText" rows="10" cols="50"></textarea>
+            <input type="text"  id="avtor" placeholder="Автор">
+            <button id="addBtn">Add New Excuse</button>
+        </form>
+        <div class="allExcuses">
+            <h3>All Excuses</h3>
+        </div>
+       </main>
+       
+       
+    </div>
+    
 
     <script src="./main.js"></script>
 </body>

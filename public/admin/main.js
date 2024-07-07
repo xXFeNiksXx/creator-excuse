@@ -32,3 +32,20 @@ $('#addBtn').click(function(){
       console.error('Помилка при відправці даних:', error);
     });
 })
+
+function getAllExcuses(){
+  axios.get('http://localhost:5000/excuse')
+  .then(res=>{
+      console.log(res.data);
+      for(let el of res.data){
+          $('.allExcuses').append(`
+            <div class="excuse">
+            <div class="text">${el.mesexcuse}</div>
+               <div class="avtor">${el.avtor}</div>
+            </div>
+              
+          `)
+      }
+  })
+}
+getAllExcuses()

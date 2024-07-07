@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+
+}
+.wrap header{
+    width: 100%;
+    height: 10vh;
+}
+.wrap main{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.wrap main form{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.wrap main form p{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+.wrap main form #excuseText{
+    margin: 35px 0;
+    border-radius: 5px;
+}
+.wrap main form #addBtn{
+    margin: 35px 0;
+}
+.wrap main form input{
+    width: 200px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.wrap main .allExcuses{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap main .allExcuses .excuse{
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 10px;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px;
+
+}
