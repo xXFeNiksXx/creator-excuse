@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Motserrat';
+    font-family: 'Montserrat';
 }
 .wrap{
     width: 100%;
@@ -32,6 +32,7 @@
 }
 .wrap .generationBlock .yourExcuse{
     font-size: 28px;
+    margin-right: 100px;
 }
 
 .wrap .generationBlock .excuseBox{
@@ -49,6 +50,11 @@
     background-color: gray;
     border-radius: 20px;
     padding: 10px; 
+}
+.wrap .generationBlock .excuseBox .excuseArea .avtor{
+    position: relative;
+    top: 80px;
+    left: 300px;
 }
 .wrap .generationBlock .excuseBox .excuseRate{
    display: flex;
