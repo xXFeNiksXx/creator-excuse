@@ -8,7 +8,12 @@ $('.generation').click(function getNewExcuse(){
         $('.avtor').empty();
         $('.generatedExcuse').append(res.data[num].mesexcuse);
         $('.avtor').append(res.data[num].avtor);
-        
+        $('.excuses').append(`
+            <div class="historicExcuse">
+            <div class="historicMes">${res.data[num].mesexcuse}</div>
+            <div class="historicAvtor">${res.data[num].avtor}</div>
+            </div>
+            `)
         
         
     })

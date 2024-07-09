@@ -84,3 +84,21 @@
     font-size: 28px;
 
 }
+.wrap .excuseHistory .historicExcuse{
+    width: 80%;
+    background-color: #fff;
+    color: #000;
+    font-size: 22px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 120px;
+    padding-left: 15px;
+}
+
+.wrap .excuseHistory .historicExcuse .historicMes{
+width: 50%;
+}
+.wrap .excuseHistory .historicExcuse .historicAvtor{
+    width: 50%;
+}
